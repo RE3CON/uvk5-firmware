@@ -18,4 +18,5 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
-      with: firmware*
+      with: 
+      name: firmware*
