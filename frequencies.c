@@ -48,16 +48,16 @@ const freq_band_table_t frequencyBandTable[7] =
 #ifdef ENABLE_NOAA
 	const uint32_t NoaaFrequencyTable[10] =
 	{
-		16255000,
-		16240000,
-		16247500,
-		16242500,
-		16245000,
-		16250000,
-		16252500,
-		16152500,
-		16177500,
-		16327500
+		44600625,
+		44601875,
+		44603125,
+		44604375,
+		44605625,
+		44606875,
+		44608125,
+		44609375,
+		44610625,
+		44611875
 	};
 #endif
 
@@ -134,7 +134,7 @@ int TX_freq_check(const uint32_t Frequency)
 	switch (gSetting_F_LOCK)
 	{
 		case F_LOCK_OFF:
-			if (Frequency >= 13600000 && Frequency < 17400000)
+			if (Frequency >= 3600000 && Frequency < 17400000)
 				return 0;
 			if (Frequency >= 17400000 && Frequency < 35000000)
 				if (gSetting_200TX)
@@ -144,7 +144,7 @@ int TX_freq_check(const uint32_t Frequency)
 					return 0;
 			if (Frequency >= 40000000 && Frequency < 47000000)
 				return 0;
-			if (Frequency >= 47000000 && Frequency <= 60000000)
+			if (Frequency >= 47000000 && Frequency <= 130000000)
 				if (gSetting_500TX)
 					return 0;
 			break;
