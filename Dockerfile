@@ -7,6 +7,5 @@ RUN pacman -Syyu python-pip --noconfirm
 RUN pacman -Syyu python-crcmod --noconfirm
 WORKDIR /app
 COPY . .
-RUN MKDIR compiled-firmware
 RUN git submodule update --init --recursive
-RUN make && cp firmware* compiled-firmware/
+RUN make && cp firmware* app/
