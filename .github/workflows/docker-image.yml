@@ -21,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: firmware
-        path: firmware*.bin
+        path: app/firmware*.bin
