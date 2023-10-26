@@ -20,7 +20,7 @@
 
 // the BK4819 has 2 bands it covers, 18MHz ~ 630MHz and 760MHz ~ 1300MHz
 const freq_band_table_t BX4819_band1 = { 1800000,  63000000};
-const freq_band_table_t BX4819_band2 = {84000000, 130000000};
+const freq_band_table_t BX4819_band2 = {76000000, 130000000};
 
 const freq_band_table_t frequencyBandTable[7] =
 {
@@ -45,19 +45,19 @@ const freq_band_table_t frequencyBandTable[7] =
 	#endif
 };
 
-#ifdef ENABLE_NOAA
+#ifdef ENABLE_NOAA //first 10 PMR Channels
 	const uint32_t NoaaFrequencyTable[10] =
 	{
-		16255000,
-		16240000,
-		16247500,
-		16242500,
-		16245000,
-		16250000,
-		16252500,
-		16152500,
-		16177500,
-		16327500
+		44600625,
+		44601875,
+		44603125,
+		44604375,
+		44605625,
+		44606875,
+		44608125,
+		44609375,
+		44610625,
+		44611875
 	};
 #endif
 
