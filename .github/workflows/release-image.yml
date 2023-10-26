@@ -1,0 +1,24 @@
+name: Release Docker Image CI
+
+on:
+  push:
+    branches: [ "release" ]
+  pull_request:
+    branches: [ "release" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-firmware:$(date +%s)
+    
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: firmware
+        path: firmware*.bin
