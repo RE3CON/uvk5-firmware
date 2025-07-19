@@ -22,7 +22,7 @@ jobs:
     steps:
      
     - name: arm-none-eabi-gcc
-      uses: carlosperate/arm-none-eabi-gcc-action@v1
+      uses: carlosperate/arm-none-eabi-gcc-action@a532c97fbfff58385beb2247ae1464dc4cc71724 # v1
       with:
         release: '10.3-2021.10'
 
@@ -51,7 +51,7 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
     - name: 'Add unpacked FW to release'
-      uses: svenstaro/upload-release-action@v2
+      uses: svenstaro/upload-release-action@81c65b7cd4de9b2570615ce3aad67a41de5b1a13 # v2
       with:
         file: firmware.bin
         asset_name: ${{ format('firmware.raw_v{0}.bin', github.run_number) }}
