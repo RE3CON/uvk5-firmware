@@ -29,7 +29,7 @@ jobs:
         ref: ${{ github.event.pull_request.head.sha }}
         fetch-depth: ${{ steps.depth.outputs.GIT_COMMITS }}
     - id: files
-      uses: jitterbit/get-changed-files@v1
+      uses: jitterbit/get-changed-files@b17fbb00bdc0c0f63fcf166580804b4d2cdc2a42 # v1
     - name: Check changed files
       run: |
         echo "GIT_COMMITS=${{ steps.depth.outputs.GIT_COMMITS }}"
